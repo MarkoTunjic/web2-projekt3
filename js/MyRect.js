@@ -103,6 +103,6 @@ class MyRect {
     }
 
     collides(otherX, otherY) {
-        return (otherX >= (this.x - maxSpeed) && otherX <= (this.x + rectWidth + maxSpeed)) && (otherY >= (this.y - maxSpeed) && otherY <= (this.y + rectHeight + maxSpeed))
+        return (otherX >= (this.x - Math.abs(this.speedX)) && otherX <= (this.x + rectWidth + Math.abs(this.speedX))) && (otherY >= (this.y - Math.abs(this.speedY)) && otherY <= (this.y + rectHeight + Math.abs(this.speedY)))
     }
 }
